@@ -1,55 +1,47 @@
-Studentresult.java: 
-import java.util.Scanner; 
- 
-interface Sports 
-{ 
-    public void sportsGetData(); 
-    public void sportsDispData(); 
-} 
- 
-class Student 
-{ 
-    String name; 
-    int roll_no; 
-    int S1,S2; 
- 
-    Student(String name, int roll_no, int S1, int S2) 
- 
-46 
- 
+import java.util.*;
+interface sport
+{
+public void sportsgetdata();
+public void sportsdispdata();
+}
+class student
+{
+String name;
+int rollno;
+int s1,s2;
+student( String name,  int rollno, int s1, int s2)
+{
+this.name=name;
+this.rollno=rollno;
+this.s1=s1;
+this.s2=s2;
+
+}
+}
+class result extends student implements sport
+{
+int rank;
+String item;
+Scanner sc=new Scanner(System.in);
+result(String name, int rollno, int s1, int s2)
+{
+super(name , rollno , s1 , s2);
+}
+void acadamic() 
     { 
-        this.name = name; 
-        this.roll_no = roll_no; 
-        this.S1 = S1; 
-        this.S2 = S2; 
-    } 
-} 
- 
-class Result extends Student implements Sports 
-{ 
-    int rank; 
-    String item; 
-    Scanner in = new Scanner(System.in); 
-    Result(String name, int roll_no, int S1, int S2) 
-    { 
-        super(name, roll_no, S1, S2); 
-    } 
- 
-    void acadamic() 
-    { 
-        int percentage = (S1+S2)*100/200; 
+        int percentage = (s1+s2)*100/200; 
         System.out.print("Percentage = " + percentage); 
     } 
  
-    public void sportsGetData() 
+    public void sportsgetdata() 
     { 
         System.out.print("Enter the item name "); 
-        item = in.nextLine(); 
+        item = sc.nextLine(); 
         System.out.print("Enter the rank "); 
-        rank = in.nextInt(); 
+        rank = sc.nextInt(); 
     } 
  
-    public void sportsDispData() 
+    public void sportsdispdata() 
     { 
         System.out.println("Sports item :" + item); 
         System.out.print("Rank : "+ rank); 
@@ -57,9 +49,7 @@ class Result extends Student implements Sports
  
 } 
  
-class Studentresult 
- 
-47 
+class Studentresult
  
 { 
     public static void main(String args[]) 
@@ -69,18 +59,19 @@ class Studentresult
         System.out.print("Enter tha name "); 
         String name = in.nextLine(); 
         System.out.print("Enter Roll no "); 
-        int roll = in.nextInt(); 
+        int rollno= in.nextInt(); 
         System.out.print("Enter mark in first subject "); 
-        int S1 = in.nextInt(); 
+        int s1 = in.nextInt(); 
         System.out.print("Enter mark in second subject "); 
-        int S2 = in.nextInt(); 
+        int s2 = in.nextInt(); 
          
-        Result r = new Result(name,roll,S1,S2); 
-        r.sportsGetData(); 
+        result r = new result(name, rollno , s1, s2); 
+        r.sportsgetdata(); 
          
         r.acadamic(); 
         System.out.println(); 
-        r.sportsDispData(); 
+        r.sportsdispdata(); 
+  
  
     } 
 } 
