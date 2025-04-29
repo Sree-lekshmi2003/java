@@ -1,0 +1,21 @@
+student@cec-ThinkCentre-M83:~/AryamolMS$ javac -d . figure.java
+student@cec-ThinkCentre-M83:~/AryamolMS$ javac -d . rectangle.java
+student@cec-ThinkCentre-M83:~/AryamolMS$ javac -d . triangle.java
+student@cec-ThinkCentre-M83:~/AryamolMS$ javac -d . square.java
+student@cec-ThinkCentre-M83:~/AryamolMS$ javac -d . circle.java
+student@cec-ThinkCentre-M83:~/AryamolMS$ javac -d . Test.java
+student@cec-ThinkCentre-M83:~/AryamolMS$ java mca.Test
+enter the length and breadth of the reactangel:
+3
+6
+area of a recatangle:18.0
+enter the base and height of a triangle:
+5
+7
+area of a triangel :17.5
+enter the side of squre:
+5
+area of  square is:25.0
+enter the radius of the circle :
+6
+area of  circle is:113.03999999999999
